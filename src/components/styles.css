@@ -1,0 +1,24 @@
+.tasks {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  max-width: 350px;
+  min-height: 250px;
+  border: dotted 1px black;
+  padding: 5px;
+  list-style-type: none;
+}
+
+.task {
+  background-color: #05273d;
+  border: solid 1px black;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+.taskContent {
+  display: flex;
+  flex-flow: column;
+  padding: 20px;
+}
