@@ -1,3 +1,24 @@
 .draggable-original {
-  display: none;
+}
+
+.draggable-mirror {
+  z-index: 1;
+}
+
+.draggable-source--is-dragging {}
+.draggable-source--is-dragging:before {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: gray;
+  border: dashed 1px black;
+  content: 'Placeholder';
+  margin-left: -1px;
+  margin-top: -1px;
+  z-index: 0;
 }

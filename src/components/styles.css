@@ -10,11 +10,13 @@
 }
 
 .task {
+  position: relative;
   background-color: #05273d;
   border: solid 1px black;
   color: white;
   cursor: pointer;
   width: 100%;
+  border: solid 1px #05273d;
 }
 
 .taskContent {

@@ -7,9 +7,9 @@ require('./globals.css?raw')
 const { Draggable, Sortable } = require('@shopify/draggable')
 
 const Task = (props) => {
-  const { done, title, description } = props
+  const { id, done, title, description } = props
   return (
-    <li className={css.task}>
+    <li data-id={id} className={css.task}>
       <section className={css.taskContent }>
         <header>{ title }</header>
         <div>{ description }</div>
@@ -48,10 +48,10 @@ module.exports = class TaskList extends React.Component {
 
   render() {
     const tasks = [
-      { title: 'lorem ipsum', description: 'asdfsadfasd', done: false },
-      { title: 'blarg piwats', description: 'asdfsdf', done: false },
-      { title: 'DO IT', description: 'asdfasdfasd sadfasdfas asdfasdfasd', done: true },
-      { title: 'Dayam Gina!', description: 'asdfsadf fasdfasdfa asdfsadf', done: false  }
+      { id: 1, title: 'lorem ipsum', description: 'asdfsadfasd', done: false },
+      { id: 2, title: 'blarg piwats', description: 'asdfsdf', done: false },
+      { id: 3, title: 'DO IT', description: 'asdfasdfasd sadfasdfas asdfasdfasd', done: true },
+      { id: 4, title: 'Dayam Gina!', description: 'asdfsadf fasdfasdfa asdfsadf', done: false  }
     ]
 
     return <React.Fragment>
@@ -59,6 +59,7 @@ module.exports = class TaskList extends React.Component {
         {
           tasks.map((task, index) => 
             <Task
+              id={task.id}
               key={index}
               done={task.done}
               title={task.title}
